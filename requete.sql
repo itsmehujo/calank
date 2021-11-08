@@ -4,6 +4,10 @@ CREATE USER 'utilisateur'@'localhost' IDENTIFIED BY 'calanque';
 
 GRANT ALL CleanMyCalanque.* TO 'utilisateur'@'localhost' IDENTIFIED BY 'calanque';
 
+FLUSH PRIVILEGES;
+
+USE CleanMyCalanque;
+
 CREATE TABLE sorties(
     id INT AUTO_INCREMENT PRIMARY KEY,
     lieu VARCHAR(150),
