@@ -5,8 +5,8 @@
 class Dbh {
     private $host = "localhost";
     private $port = 3306;
-    private $user = "calanque";
-    private $pwd = "password";
+    private $user = "root";
+    private $pwd = "";
     private $dbName = "CleanMyCalanque";
 
     protected function connect() {
