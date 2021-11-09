@@ -5,6 +5,139 @@ function randomColor() {
     return 'rgb(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')';
 }
 
+function barSums(SUM, div_id) {
+    const div = document.getElementById(div_id)
+    const canvas = document.createElement('canvas')
+    canvas.id = div_id + '_canva' + 'SUMBAR'
+    div.appendChild(canvas)
+    document.querySelector('body').appendChild(div)
+    const LABELS = []
+    const truedata = []
+    for (let type of SUM) {
+        if(type.name !== 'kilos' && type.name !== 'cleaner') {
+            const body = {
+                quantity: type.value,
+                name: type.name
+            }
+            const name = type.name
+            LABELS.push(name)
+            truedata.push(body)
+        }
+    }
+    const xAxis = 'name'
+    const yAxis = 'quantity'
+    createBarChart(LABELS, 'en Kilos par an', truedata, canvas.id, xAxis, yAxis)
+}
+
+function barAvg(AVG, div_id) {
+    const div = document.getElementById(div_id)
+    const canvas = document.createElement('canvas')
+    canvas.id = div_id + '_canva' + 'AVGBAR'
+    div.appendChild(canvas)
+    document.querySelector('body').appendChild(div)
+    const LABELS = []
+    const truedata = []
+    for (let type of AVG) {
+        if(type.name !== 'kilos' && type.name !== 'cleaner') {
+            const body = {
+                quantity: type.value,
+                name: type.name
+            }
+            const name = type.name
+            LABELS.push(name)
+            truedata.push(body)
+        }
+    }
+    const xAxis = 'name'
+    const yAxis = 'quantity'
+    createBarChart(LABELS, 'en Kilos par an', truedata, canvas.id, xAxis, yAxis)
+}
+
+function barActivities(SHOW, div_id) {
+    const div = document.getElementById(div_id)
+    const canvas = document.createElement('canvas')
+    canvas.id = div_id + '_canva' + 'TOTALBAR'
+    div.appendChild(canvas)
+    document.querySelector('body').appendChild(div)
+    const LABELS = []
+    const truedata = []
+    for (let year of Object.entries(SHOW)) {
+        const body = {
+            activities: year[1].length,
+            year: year[0]
+        }
+        const TIME = year[0]
+        LABELS.push(TIME)
+        truedata.push(body)
+    }
+    const xAxis = Object.entries(truedata[0])[1][0]
+    const yAxis = Object.entries(truedata[0])[0][0]
+    createBarChart(LABELS, 'Activites par an', truedata, canvas.id, xAxis, yAxis)
+}
+
+function polarSUM(SUM, div_id) {
+    const div = document.getElementById(div_id)
+    const canvas = document.createElement('canvas')
+    canvas.id = div_id + '_canva' + 'SUMPOLAR'
+    div.appendChild(canvas)
+    document.querySelector('body').appendChild(div)
+    const LABELS = []
+    const DATA = []
+    const COLORS = []
+    for(let activity of SUM) {
+        if(activity.name !== 'kilos' && activity.name !== 'cleaner') {
+            LABELS.push(activity.name)
+            DATA.push(activity.value)
+            COLORS.push(randomColor())
+        }
+    }
+    createPolarArea(LABELS, 'sum', DATA, COLORS, canvas.id)
+
+}
+function polarAVG(AVG, div_id) {
+    const div = document.getElementById(div_id)
+    const canvas = document.createElement('canvas')
+    canvas.id = div_id + '_canva' + 'AVGPOLAR'
+    div.appendChild(canvas)
+    document.querySelector('body').appendChild(div)
+    const LABELS = []
+    const DATA = []
+    const COLORS = []
+    for(let activity of AVG) {
+        if(activity.name !== 'kilos' && activity.name !== 'cleaner') {
+            LABELS.push(activity.name)
+            DATA.push(activity.value)
+            COLORS.push(randomColor())
+        }
+    }
+    createPolarArea(LABELS, 'sum', DATA, COLORS, canvas.id)
+}
+
+
+
+
+function donutYears(YEARS, div_id) {
+    const div = document.getElementById(div_id)
+    const canvas = document.createElement('canvas')
+    canvas.id = div_id + '_canva' + 'TOTALDONUT'
+    div.appendChild(canvas)
+    document.querySelector('body').appendChild(div)
+    const LABELS = []
+    const DATA = []
+    const COLORS = []
+    for(let year of Object.entries(YEARS)) {
+        console.log(year)
+        const name = year[0]
+        const number = year[1].length
+        const color = randomColor()
+        LABELS.push(name)
+        DATA.push(number)
+        COLORS.push(color)
+    }
+    createDonutChart(LABELS, DATA, COLORS, 'Nouveau donut', canvas.id)
+}
+
+
 function createBarChart (LABELS, TITLE, DATA, ELEMENTID, xAxis, yAxis) {
     const data = {
         labels: LABELS,
