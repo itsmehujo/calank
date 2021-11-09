@@ -1,4 +1,9 @@
- 
+function toogle(){     
+    let toogle = document.getElementById('tr_form_add_sortie')
+    toogle.style.display="block"
+ } 
+
+
 const body = document.querySelector('body')
 const table = document.querySelector('#sorties')
 const colonne = document.getElementById('colonne')

@@ -4,6 +4,28 @@ body
   font-family: 'Roboto', sans-serif;
 }
 
+.btn_form {
+    background-color:#34a0a4;
+    background-color:#339e72;
+    border-radius:17px;
+    border:1px solid #1f2f47;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    padding:6px 13px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+}
+.btn_form:hover {
+    background-color:#4db6be;
+}
+.btn_form:active {
+    position:relative;
+    top:1px;
+}
+
 h1
 {
     font-size: 30px;
@@ -70,6 +92,23 @@ section
 {
     margin: 50px;
 }
+
+
+
+
+.input_form_sortie{
+    padding: 8px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    max-width: 3vw;
+}   
   
   
 /* Scrollbar */
@@ -83,3 +122,4 @@ section
 ::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
+
