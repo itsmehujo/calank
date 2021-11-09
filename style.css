@@ -298,7 +298,7 @@ body {
 
 .page-content .grid > article {
   display: flex;
-  height: 300px;
+  height: 500px;
   background: var(--page-content-blockColor);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
