@@ -6,7 +6,7 @@ services:
     volumes:
       - ./src:/var/www/html/
     ports:
-      - 8000:80
+      - 9558:80
     build:
       context: ./
   db:
