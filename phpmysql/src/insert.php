@@ -25,4 +25,4 @@ $proto = toZero($_POST['proto']);
 $sortie = new Sorties();
 $sortie->insertIntoDB($lieu, $date, $cleaner, $nb_sac, $kilos, $verre, $plastique, $carton, $canette, $tout_venant, $encombrant, $megots, $bouchon, $proto);
 
-header('Location: ./test.php');
+header('Location: ./index.php');
