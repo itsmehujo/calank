@@ -76,9 +76,6 @@
   </section>
   <section class="grid">
     <article>
-      <div id="container-chart">
-        <canvas id="myChart"></canvas>
-      </div>
 </article>
     <article></article>
     <article></article>
@@ -86,7 +83,9 @@
     <article></article>
     <article></article>
     <article></article>
-    <article></article>
+    <article><div id="container-chart">
+        <canvas id="myChart"></canvas>
+      </div></article>
   </section>
   <footer class="page-footer">
     </a>
