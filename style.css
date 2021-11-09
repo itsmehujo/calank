@@ -3,19 +3,19 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
 
 :root {
-  --page-header-bgColor: rgb(63 69 72);
+  --page-header-bgColor: rgb(0 0 0);
   --page-header-bgColor-hover: #1d2636;
   --page-header-txtColor: #dde9f8;
   --page-header-headingColor: #7889a4;
   --page-header-width: 220px;
-  --page-content-bgColor: #f0f1f6;
-  --page-content-txtColor: #171616;
-  --page-content-blockColor: #fff;
+  --page-content-bgColor: #122A40;
+  --page-content-txtColor: #000;
+  --page-content-blockColor: #ced4da;
   --white: #fff;
   --black: #333;
   --blue: #00b9eb;
   --red: #ec1848;
-  --border-radius: 4px;
+  --border-radius: 25px;
   --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
   --switch-bgLightModeColor: #87cefa;
   --switch-sunColor: gold;
@@ -220,7 +220,6 @@ body {
 .search-and-user {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-column-gap: 50px;
   align-items: center;
   background: var(--page-content-bgColor);
   margin-bottom: 30px;
