@@ -75,9 +75,10 @@
     </form>
   </section>
   <section class="grid">
-    <article><div style="width:1000px;">
-  <canvas id="myChart"></canvas>
-</div>
+    <article id="container-chart-article">
+      <div id="container-chart">
+        <canvas id="myChart"></canvas>
+      </div>
 </article>
     <article></article>
     <article></article>

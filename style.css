@@ -74,6 +74,7 @@ body {
 }
 
 
+
 /* HEADER STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-header {
@@ -87,6 +88,23 @@ body {
   width: var(--page-header-width);
   color: var(--page-header-txtColor);
   background: var(--page-header-bgColor);
+}
+
+/* chart js */
+.container-chart-article{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-chart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#myChart {
+  width: 100% !important;
+  height: 100%;
 }
 
 /*In case you prefer an absolutely positioned header that covers the full page height, add these styles*/
