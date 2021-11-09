@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  php-apache-environment:
+    container_name: php-apache
+    image: php:8.0-apache
+    volumes:
+      - ./src:/var/www/html/
+    ports:
+      - 8000:80
+    build:
+      context: ./
+  db:
+    container_name: db
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: .password.
+      MYSQL_DATABASE: calanques
+      MYSQL_USER: user
+      MYSQL_PASSWORD: .password
+    ports:
+      - "9906:3306"
