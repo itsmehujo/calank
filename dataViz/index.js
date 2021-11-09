@@ -11,7 +11,7 @@ const labels = [
     labels: labels,
     datasets: [{
       label: "nombre de cleaners d'année en année ",
-      backgroundColor: 'rgb(255, 99, 132)',
+      backgroundColor: "#0c4b66",
       borderColor: 'rgb(255, 99, 132)',
       data: [
         {"cleaners": 75,  "année": 2017},
