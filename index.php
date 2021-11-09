@@ -66,10 +66,15 @@
     </form>
   </section>
   <section class="grid">
-    <article><div style="width:1000px;">
-  <canvas id="myChart"></canvas>
-</div>
-</article>
+
+    <article>
+              <div style="width:1000px;">
+            <canvas id="myChart"></canvas>
+              </div>
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src='index.js'></script>
+    </article>
+
     <article></article>
     <article></article>
     <article></article>
@@ -82,6 +87,5 @@
     </a>
   </footer>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src='index.js'></script>
+
 <script src="script.js"></script>
