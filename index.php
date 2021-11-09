@@ -75,7 +75,7 @@
     </form>
   </section>
   <section class="grid">
-    <article id="container-chart-article">
+    <article>
       <div id="container-chart">
         <canvas id="myChart"></canvas>
       </div>

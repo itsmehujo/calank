@@ -1,4 +1,3 @@
-let data = [{"id":"1","lieu":"miami","date":null,"cleaner":"23","nb_sac":null,"kilos":null,"verre":null,"plastique":null,"carton":null,"canette":null,"tout_venant":null,"encombrant":null,"megots":null,"bouchon":null,"proto":null},{"id":"2","lieu":"los angeles","date":null,"cleaner":"2123","nb_sac":null,"kilos":null,"verre":null,"plastique":null,"carton":null,"canette":null,"tout_venant":null,"encombrant":null,"megots":null,"bouchon":null,"proto":null},{"id":"3","lieu":"oaksd","date":"2021-12-31","cleaner":"1","nb_sac":"1","kilos":"1","verre":"1","plastique":"1","carton":"1","canette":"1","tout_venant":"1","encombrant":"1","megots":"1","bouchon":"1","proto":"1"}]
  
 const body = document.querySelector('body')
 const table = document.querySelector('#sorties')
@@ -12,7 +11,6 @@ tbody.appendChild(ligne)
 
 
 let dataset = JSON.parse(document.getElementById('data').innerHTML)
-console.log(dataset)
 let i = 1
 for (let data1 of dataset){
     const ligne = document.createElement('tr')

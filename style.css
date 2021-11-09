@@ -243,6 +243,13 @@ body {
   margin-bottom: 30px;
 }
 
+#form_add_sortie {
+}
+.input_form_sortie{
+  margin: 5px;
+
+}
+
 .search-and-user form {
   position: relative;
 }
