@@ -26,6 +26,7 @@ const data = {
   }]
 };
 
+
 const config = {
   type: 'doughnut',
   data: data,
