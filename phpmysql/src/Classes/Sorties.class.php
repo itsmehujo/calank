@@ -5,6 +5,7 @@ class Sorties extends Dbh
 {
     private $connection;
     public $data;
+    public $dataByYear = [];
     public $sums = [];
     public $avgs = [];
 
@@ -25,6 +26,18 @@ class Sorties extends Dbh
         $stmt = $this->connection->prepare($sql);
         $stmt->execute();
         $this->data = $stmt->fetchAll();
+    }
+    public function getAllByYear () {
+        $years = ['2017', '2018', '2019', '2020', '2021'];
+        foreach($years as $year) {
+            $year = $year . '%';
+            $sql = "SELECT * FROM sorties WHERE date LIKE :year";
+            $stmt = $this->connection->prepare($sql);
+            $stmt->bindParam(':year', $year);
+            $stmt->execute();
+            $year = substr($year, 0, -1);
+            $this->dataByYear[$year] = $stmt->fetchAll();
+        }
     }
     public function insertIntoDB (string $lieu, string $date, int $cleaner, int $nb_sac, int $kilos, float $verre, float $plastique, float $carton, float $canette, float $tout_venant, float $encombrant, float $megots, float $bouchon, float $proto) {
         $sql = 'INSERT INTO sorties(lieu, date, cleaner, nb_sac, kilos, verre, plastique, carton, canette, tout_venant, encombrant, megots, bouchon, proto) VALUES (:lieu, :date, :cleaner, :nb_sac, :kilos, :verre, :plastique, :carton, :canette, :tout_venant, :encombrant, :megots, :bouchon, :proto)';
