@@ -44,4 +44,16 @@ class Sorties extends Dbh
         $stmt->execute();
         return $stmt->rowCount();
     }
+    public function sum (string $column) {
+        $sql = "SELECT SUM($column) AS sum FROM sorties";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetch()['sum'];
+    }
+    public function avg (string $column) {
+        $sql = "SELECT AVG($column) AS avg FROM sorties";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetch()['avg'];
+    }
 }

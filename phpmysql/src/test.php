@@ -1,4 +1,4 @@
-<form action="./insert.php" method="post">
+<form action="insert.php" method="post">
 <input type="date" name="date" placeholder="date">
 <input type="text" name="lieu" placeholder="lieu">
 <input type="number" name="cleaner" placeholder="cleaner">

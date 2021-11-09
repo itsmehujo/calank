@@ -20,3 +20,6 @@ services:
       MYSQL_PASSWORD: .password
     ports:
       - "9906:3306"
+    volumes:
+      - ./db:/var/lib/mysql/dumps/
+      - ./mysql_data:/var/lib/mysql
