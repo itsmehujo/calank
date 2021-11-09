@@ -1,0 +1,8 @@
+body {
+    background: linear-gradient(to right, #339e72, #25b7c4);
+}
+
+div {
+    width: 30%;
+    margin: auto;
+}
