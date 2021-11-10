@@ -10,7 +10,6 @@ function barSums(SUM, div_id) {
     const canvas = document.createElement('canvas')
     canvas.id = div_id + '_canva' + 'SUMBAR'
     div.appendChild(canvas)
-    document.querySelector('body').appendChild(div)
     const LABELS = []
     const truedata = []
     for (let type of SUM) {
@@ -34,7 +33,6 @@ function barAvg(AVG, div_id) {
     const canvas = document.createElement('canvas')
     canvas.id = div_id + '_canva' + 'AVGBAR'
     div.appendChild(canvas)
-    document.querySelector('body').appendChild(div)
     const LABELS = []
     const truedata = []
     for (let type of AVG) {
@@ -58,7 +56,6 @@ function barActivities(SHOW, div_id) {
     const canvas = document.createElement('canvas')
     canvas.id = div_id + '_canva' + 'TOTALBAR'
     div.appendChild(canvas)
-    document.querySelector('body').appendChild(div)
     const LABELS = []
     const truedata = []
     for (let year of Object.entries(SHOW)) {
@@ -80,7 +77,6 @@ function polarSUM(SUM, div_id) {
     const canvas = document.createElement('canvas')
     canvas.id = div_id + '_canva' + 'SUMPOLAR'
     div.appendChild(canvas)
-    document.querySelector('body').appendChild(div)
     const LABELS = []
     const DATA = []
     const COLORS = []
@@ -99,7 +95,6 @@ function polarAVG(AVG, div_id) {
     const canvas = document.createElement('canvas')
     canvas.id = div_id + '_canva' + 'AVGPOLAR'
     div.appendChild(canvas)
-    document.querySelector('body').appendChild(div)
     const LABELS = []
     const DATA = []
     const COLORS = []
@@ -121,12 +116,10 @@ function donutYears(YEARS, div_id) {
     const canvas = document.createElement('canvas')
     canvas.id = div_id + '_canva' + 'TOTALDONUT'
     div.appendChild(canvas)
-    document.querySelector('body').appendChild(div)
     const LABELS = []
     const DATA = []
     const COLORS = []
     for(let year of Object.entries(YEARS)) {
-        console.log(year)
         const name = year[0]
         const number = year[1].length
         const color = randomColor()
@@ -143,8 +136,8 @@ function createBarChart (LABELS, TITLE, DATA, ELEMENTID, xAxis, yAxis) {
         labels: LABELS,
         datasets: [{
             label: TITLE,
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgba(13, 75, 102, 0.5)',
+            borderColor: 'rgb(12, 75, 102)',
             data: DATA,
         }]
     };
