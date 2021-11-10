@@ -13,7 +13,7 @@
     <section>
 
         <h1>Résume en chiffres </h1>
-        <div><a href="../index.php" style="background-color:#34a0a4;
+        <div><a href="./index.php" style="background-color:#34a0a4;
     background-color:#339e72;
     border-radius:10px;
     border:1px solid #1f2f47;

@@ -10,23 +10,22 @@ function toZero($var) {
 }
 // 
 if(isset($_POST['submit'])){
-    if(isset($_POST["lieu"]) && isset($_POST["date"]) && isset($_POST["nb_sac"]) && isset($_POST["kilos"])){
-
-        $sortie->insertIntoDB(toZero($_POST["lieu"]), 
-        toZero($_POST["date"]), 
-        toZero($_POST["cleaner"]),
-        toZero($_POST["nb_sac"]), 
-        toZero($_POST["kilos"]), 
-        toZero($_POST["verre"]), 
-        toZero($_POST["plastique"]), 
-        toZero($_POST["carton"]), 
-        toZero($_POST["canette"]),
-        toZero($_POST["tout_venant"]),
-        toZero($_POST["encombrant"]),
-        toZero($_POST["megots"]),
-        toZero($_POST["bouchon"]),
-        toZero($_POST["proto"])
-    );
+    if(!empty($_POST["lieu"]) && !empty($_POST["date"]) && !empty($_POST["nb_sac"]) && !empty($_POST["kilos"])){
+        $lieu = toZero($_POST['lieu']);
+        $date = toZero($_POST['date']);
+        $cleaner = toZero($_POST['cleaner']);
+        $nb_sac = toZero($_POST['nb_sac']);
+        $kilos = toZero($_POST['kilos']);
+        $verre = toZero($_POST['verre']);
+        $plastique = toZero($_POST['plastique']);
+        $carton = toZero($_POST['carton']);
+        $canette = toZero($_POST['canette']);
+        $tout_venant = toZero($_POST['tout_venant']);
+        $encombrant = toZero($_POST['encombrant']);
+        $megots = toZero($_POST['megots']);
+        $bouchon = toZero($_POST['bouchon']);
+        $proto = toZero($_POST['proto']);
+        $sortie->insertIntoDB($lieu, $date, $cleaner, $nb_sac, $kilos, $verre, $plastique, $carton, $canette, $tout_venant, $encombrant, $megots, $bouchon, $proto);
     }
     else{
         // echo column field empty
@@ -55,7 +54,7 @@ if(isset($_POST['submit'])){
 <body>
   <div id="data" style="display:none;"><?php echo json_encode($sortie->data); ?></div>
   <h1>Tableau des matériaux traitées</h1>
-      <div><a href="../index.php" style="background-color:#34a0a4;
+      <div><a href="./index.php" style="background-color:#34a0a4;
     background-color:#339e72;
     border-radius:10px;
     border:1px solid #1f2f47;
@@ -267,7 +266,7 @@ if(isset($_POST['submit'])){
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(66,66,66,.75);
     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
-    max-width: 2.5vw;" class="input_form_sortie" type="submit" value="Ajout"></td>
+    max-width: 2.5vw;" class="input_form_sortie" type="submit" name="submit" value="Ajout"></td>
         </form>
         </tr> 
     </div>
