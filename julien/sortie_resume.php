@@ -6,25 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tableau_sortie_nettoyage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <title>Data My Calanques</title>
-    <link href="https://kendo.cdn.telerik.com/2021.3.914/styles/kendo.common.min.css" rel="stylesheet" />
-    <link href="https://kendo.cdn.telerik.com/2021.3.914/styles/kendo.default.min.css" rel="stylesheet" />
-    <script src="https://kendo.cdn.telerik.com/2021.3.914/js/jquery.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2021.3.914/js/kendo.all.min.js"></script>
-
-    
-    
-    
 </head>
 <body>
     <section>
-      <button class='export-pdf k-button'>Save as PDF</button>
-    
+
         <h1>Résume en chiffres </h1>
+        <div><a href="../index.php" style="background-color:#34a0a4;
+    background-color:#339e72;
+    border-radius:10px;
+    border:1px solid #1f2f47;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    padding:6px 13px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #263666;" class="btn_form" id="btn_add_line">retour au dashboard</a></div><br><br>
         <div class="table-header">
-          <table cellpadding="1" cellspacing="1" border="0">
+          <table id="myBoard" cellpadding="1" cellspacing="1" border="0">
             <thead>
               <tr>
                 <th>Tâches</th>
@@ -60,5 +62,6 @@
         </div>
       </section>
       <script src="sortie_resume.js"></script>
+
 </body>
 </html>

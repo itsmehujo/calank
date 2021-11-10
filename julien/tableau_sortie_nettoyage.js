@@ -1,7 +1,8 @@
 function toogle(){     
     let toogle = document.getElementById('tr_form_add_sortie')
     toogle.style.display="block"
- } 
+} 
+
 
 
 const body = document.querySelector('body')
@@ -13,6 +14,7 @@ table.appendChild(tbody)
 const ligne = document.createElement('tr')
 ligne.className = 'ligne'
 tbody.appendChild(ligne)
+
 
 
 let dataset = JSON.parse(document.getElementById('data').innerHTML)

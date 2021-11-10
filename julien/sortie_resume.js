@@ -969,7 +969,7 @@ for(let data1 of DATAYEARLY){
     tr_cleaner.appendChild(td2021)
     tr_cleaner.appendChild(td_cleaner_total)
 
-td_cleaner.innerText = "Cleaners"
+td_cleaner.innerText = "Cleaners : "
 td2017.innerText = total_cleaner2017
 td2018.innerText = total_cleaner2018
 td2019.innerText = total_cleaner2019
@@ -996,7 +996,7 @@ let tr_sacs = document.getElementById("sacs")
     tr_sacs.appendChild(td_sac_2021)
     tr_sacs.appendChild(td_total_sac)
 
-td_sacs.innerText = "sacs"
+td_sacs.innerText = "Sacs : "
 td_sac_2017.innerText = total_sacs2017
 td_sac_2018.innerText = total_sacs2018
 td_sac_2019.innerText = total_sacs2019
@@ -1022,7 +1022,7 @@ let tr_sacs_per_cleaner = document.getElementById("sacs_per_cleaner")
     tr_sacs_per_cleaner.appendChild(td_sac_per_cleaner_2021)
     tr_sacs_per_cleaner.appendChild(td_total_sac_per_cleaner)
 
-td_sacs_per_cleaner.innerText = "Sacs per cleaner"
+td_sacs_per_cleaner.innerText = "Sacs per cleaner : "
 td_sac_per_cleaner_2017.innerText = sac_per_cleaner2017
 td_sac_per_cleaner_2018.innerText = sac_per_cleaner2018
 td_sac_per_cleaner_2019.innerText = sac_per_cleaner2019
@@ -1048,7 +1048,7 @@ let tr_kilos = document.getElementById("kilos")
     tr_kilos.appendChild(td_kilos_2021)
     tr_kilos.appendChild(td_total_kilos)
 
-td_kilos.innerText = "kilos"
+td_kilos.innerText = "Kilos : "
 td_kilos_2017.innerText = total_kilos2017
 td_kilos_2018.innerText = total_kilos2018
 td_kilos_2019.innerText = total_kilos2019
@@ -1076,7 +1076,7 @@ let tr_kilos_per_cleaner = document.getElementById("kilo_per_cleaner")
     tr_kilos_per_cleaner.appendChild(td_kilos_per_cleaner_2021)
     tr_kilos_per_cleaner.appendChild(td_total_kilos_per_cleaner)
 
-td_kilos_per_cleaner.innerText = "kilos per cleaner"
+td_kilos_per_cleaner.innerText = "kilos per cleaner : "
 td_kilos_per_cleaner_2017.innerText = kilos_per_cleaner2017
 td_kilos_per_cleaner_2018.innerText = kilos_per_cleaner2018
 td_kilos_per_cleaner_2019.innerText = kilos_per_cleaner2019
